@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gamertag: MyString
+  entry: MyText
+
+two:
+  gamertag: MyString
+  entry: MyText

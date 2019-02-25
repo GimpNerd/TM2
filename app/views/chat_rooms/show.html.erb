@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chat_room.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chat_room.description %>
+</p>
+
+<div id="posts">
+
+    <% @chat_room.posts.each do |post| %>
+
+      <p>
+        <strong><%= current_user.email %></strong><br />
+        <%= post.entry %>
+      </p>
+
+    <% end %>
+    <%= render 'posts/form', post: @post %>
+
+</div>
+
+<%= link_to 'Edit', edit_chat_room_path(@chat_room) %> |
+<%= link_to 'Back', chat_rooms_path %>
